@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<html lang="de-DE" class="no-js">
+
+<!-- Mirrored from www.randominsights.net/2006/02/13/how-to-write-a-recent-comments-macro-for-dasblog/?replytocom=471 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jun 2017 09:35:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="../../../../xmlrpc.php">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>How to write a “Recent Comments” macro for dasBlog &#8211; RandomInsights.net</title>
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="RandomInsights.net &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RandomInsights.net &raquo; Kommentar-Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="RandomInsights.net &raquo; How to write a “Recent Comments” macro for dasBlog Kommentar-Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.randominsights.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentysixteen-jetpack-css'  href='../../../../wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen167b.css?ver=4.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../../../wp-content/plugins/jetpack/_inc/genericons/genericons/genericons128b.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../../../../wp-content/themes/twentysixteen/styleef15.css?ver=4.8' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='http://www.randominsights.net/wp-content/themes/twentysixteen/css/ie.css?ver=20160412' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='http://www.randominsights.net/wp-content/themes/twentysixteen/css/ie8.css?ver=20160412' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='http://www.randominsights.net/wp-content/themes/twentysixteen/css/ie7.css?ver=20160412' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack_css-css'  href='../../../../wp-content/plugins/jetpack/css/jetpack167b.css?ver=4.6' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://www.randominsights.net/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Redesign' href='../../12/redesign/index.html' />
+<link rel='next' title='Langeweile' href='../langeweile/index.html' />
+<meta name="generator" content="WordPress 4.8" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../../../indexdd01.html?p=304' />
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/json+oembed" href="../../../../wp-json/oembed/1.0/embedff5e.json?url=http%3A%2F%2Fwww.randominsights.net%2F2006%2F02%2F13%2Fhow-to-write-a-recent-comments-macro-for-dasblog%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../../../wp-json/oembed/1.0/embed2c33?url=http%3A%2F%2Fwww.randominsights.net%2F2006%2F02%2F13%2Fhow-to-write-a-recent-comments-macro-for-dasblog%2F&amp;format=xml" />
+<style type='text/css'>img#wpstats{display:none}</style>			<style type="text/css" id="wp-custom-css">
+				.entry-footer > .byline {
+	display: none;
+}
+
+body:not(.search-results) .cat-links {
+	display: none;
+}
+
+div.reply {
+  display: none;
+}
+			</style>
+		</head>
+
+<body class="post-template-default single single-post postid-304 single-format-standard">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+					
+											<p class="site-title"><a href="../../../../index.html" rel="home">RandomInsights.net</a></p>
+											<p class="site-description">Wahllose Erkenntnisse, beiläufige Einsichten.</p>
+									</div><!-- .site-branding -->
+
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-304" class="post-304 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">How to write a “Recent Comments” macro for dasBlog</h1>	</header><!-- .entry-header -->
+
+	
+	
+	<div class="entry-content">
+		<p>After I moved to dasBlog, I found myself looking for a possibility to display the most recent comments on the sidebar, so that people can easily see if somebody responded to their comments. But apparently there is nothing like this in dasBlog (at least I haven&#8217;t found anything), so I decided to write my own macro. Custom macros are supported by the latest versions of dasBlog. Basicly, a macro is just a class library (.DLL file) with classes and methods. If one of these methods returns a <font face="Courier New">System.Web.UI.Control </font>object, we can call it in our templates.</p>
+<p>I started by creating a new class project in Visual Studio. I added references to the libraries <font face="Courier New">newtelligence.DasBlog.Runtime.dll</font> and <font face="Courier New">newtelligence.DasBlog.Web.Core.dll</font>. Both files are found in the /bin directory of your dasBlog installation. I also added these namespaces to the using part of my class file. Then i created a new class <font face="Courier New">RecentCommentsMacro</font>, that inherits from <font face="Courier New">SharedBasePage</font> and I implemented a constructor. The whole thing now looks something like (the entire code is attached to this post, you don&#8217;t have to copy and paste):<br /><span style="font-size:11px;color:black;font-family:Courier New;background-color:transparent;"><font size="1"><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">using</span> System;<br /><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">using</span> System.Web;<br /><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">using</span> System.Web.UI;<br /><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">using</span> newtelligence.DasBlog.Runtime;<br /><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">using</span> newtelligence.DasBlog.Web.Core;</p>
+<p><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">namespace</span> Saxx {<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">public</span> <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">class</span> RecentCommentsMacro : SharedBasePage {</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">protected</span> SharedBasePage requestPage;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">protected</span> Entry currentItem;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">public</span> RecentCommentsMacro(SharedBasePage page, Entry item) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requestPage <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> page;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentItem <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> item;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</font></span></p>
+<p>We can access the data of dasBlog by using the <font face="Courier New">DataService</font> property of the <font face="Courier New">requestPage</font> object. Knowing this, I wrote a method <font face="Courier New">RecentComments(X, Y)</font> that displays the latest X comments and truncates its text to Y characters.&nbsp;My method caches the entire control until a new comment has been posted, so we don&#8217;t have to get all comments and sort them whenever a page gets called (which is usually pretty often).&nbsp;I don&#8217;t think I&#8217;ve to explain the code in detail, it&#8217;s quite straight forward:<br /><span style="font-size:11px;color:black;font-family:Courier New;background-color:transparent;"><span style="font-size:11px;color:black;font-family:Courier New;background-color:transparent;"><font size="1"><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">public</span> <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">static</span> LiteralControl commentsLiteral <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">new</span> LiteralControl();<br /><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">public</span> <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">static</span> DateTime lastUpdate <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> DateTime.MinValue;</p>
+<p><span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">public</span> <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">virtual</span> Control RecentComments(<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">int</span> numberOfComments, <span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">int</span> maxLengthOfComment) {<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">if</span>(numberOfComments &lt; 1) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfComments <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> 10;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">if</span>(maxLengthOfComment &lt; 1) <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLengthOfComment <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> 30;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;IBlogDataService dataService <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> requestPage.DataService;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">if</span> (dataService.GetLastCommentUpdate() &gt; lastUpdate) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CommentCollection comments <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> dataService.GetAllComments();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">if</span> (comments.Count &gt; 0) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comments.Sort(<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">new</span> CommentsSorter());</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commentsLiteral.Text <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> <span style="font-size:11px;color:rgb(102, 102, 102);font-family:Courier New;background-color:rgb(228, 228, 228);">&quot;&quot;</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">for</span> (<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">int</span> i <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> 0; i &lt; numberOfComments; i++) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#038;nbs<br />
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comment comment <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">=</span> comments[i];<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commentsLiteral.Text += <span style="font-size:11px;color:rgb(102, 102, 102);font-family:Courier New;background-color:rgb(228, 228, 228);">&quot;&lt;div class=&quot;recentComments&quot;&gt;&quot;</span> <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">+</span> comment.Author <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">+</span> <span style="font-size:11px;color:rgb(102, 102, 102);font-family:Courier New;background-color:rgb(228, 228, 228);">&quot;: &lt;a href=&quot;&quot;</span> <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">+</span> Utils.GetCommentViewUrl(comment.TargetEntryId) <span style="font-size:11px;color:red;font-family:Courier New;background-color:transparent;">+</span> <span style="font-size:11px;color:rgb(102, 102, 102);font-family:Courier New;background-color:rgb(228, 228, 228);">&quot;&quot; alt=&quot;&quot;&gt;&quot;</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commentsLiteral.Text += TruncateString(Server.HtmlDecode(comment.Content), maxLengthOfComment);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commentsLiteral.Text += <span style="font-size:11px;color:rgb(102, 102, 102);font-family:Courier New;background-color:rgb(228, 228, 228);">&quot;&lt;/a&gt;&lt;/div&gt;&quot;</span>;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:11px;color:blue;font-family:Courier New;background-color:transparent;">return</span> commentsLiteral;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />}<br /></font></span></span><br />I know, I should have used StringBuilders, better caching, a lot more comments etc. (so don&#8217;t make the same mistakes I did), but&nbsp;the thingi works and I think it gives an idea how to write a macro.&nbsp;Compile the project and copy the .DLL file to the /bin directory of your dasBlog installation. Now we&#8217;ve to edit the web.config file a bit, so that dasBlog knows there&#8217;s a new macro out there. First add or uncomment this line to/in your web.config file (if not already done):<br /><font size="1" face="Courier New">&lt;section name=&quot;newtelligence.DasBlog.Macros&quot; type=&quot;newtelligence.DasBlog.Web.Core.MacroSectionHandler, newtelligence.DasBlog.Web.Core&quot; /&gt;<br /></font><br />Then add these lines to the file (usually there is already something like it in the web.config file, but it&#8217;s in comment tags).<br /><font size="1" face="Courier New">&lt;newtelligence.DasBlog.Macros&gt;<br />&nbsp;&nbsp;&nbsp;&lt;add macro=&quot;saxxmacros&quot; type=&quot;Saxx.RecentCommentsMacro, Saxx.Macros&quot;/&gt;<br />&lt;/newtelligence.DasBlog.Macros&gt;</font><br />Note that <font face="Courier New">saxxmacros</font> is an alias that you can choose freely (just remember it later), <font face="Courier New">Saxx.RecentCommentsMacro</font> is the name of the class (including namespace) and <font face="Courier New">Saxx.Macros</font> is the name of the DLL file. So, we&#8217;re done with the web.config file. Now you can start and edit your templates.</p>
+<p>When you want to call your method in one of your templates, it has to look something like<br /><font size="1" face="Courier New">&lt;%RecentComments(12, 20)|saxxmacros%&gt;</font><br />where <font face="Courier New">RecentComments</font> is (of course) the name of your method and <font face="Courier New">saxxmacros</font> is the alias you chose before.</p>
+<p>That&#8217;s it. Have a look at the numerous methods of the DataService property I mentioned earlier &#8211; you can access almost every aspect of dasBlog through it. Knowing this you should be able to write about every macro you can think of &#8230;</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c389087c576d033421439a5006da78e7?s=49&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/c389087c576d033421439a5006da78e7?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Autor </span> <a class="url fn n" href="../../../../author/saxx/index.html">saxx</a></span></span><span class="posted-on"><span class="screen-reader-text">Veröffentlicht am </span><a href="index.html" rel="bookmark"><time class="entry-date published updated" datetime="2006-02-13T15:56:00+00:00">13. Februar 2006</time></a></span><span class="cat-links"><span class="screen-reader-text">Kategorien </span><a href="../../../../category/uncategorized/index.html" rel="category tag">Uncategorized</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			14 Gedanken zu &#8222;How to write a “Recent Comments” macro for dasBlog&#8220;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-464" class="comment even thread-even depth-1">
+			<article id="div-comment-464" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://www.pendlmayr.net/' rel='external nofollow' class='url'>Pendi</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-464">
+							<time datetime="2006-12-04T12:56:55+00:00">
+								4. Dezember 2006 um 12:56							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>wah, the bots are back! KILL&#8217;EM, KILL&#8217;EM!!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index02d2.html?replytocom=464#respond' onclick='return addComment.moveForm( "div-comment-464", "464", "respond", "304" )' aria-label='Antworte auf Pendi'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-465" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-465" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>saxx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-465">
+							<time datetime="2006-12-04T13:48:44+00:00">
+								4. Dezember 2006 um 13:48							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>yeah, my super-simple botcheck has been hacked!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexb39e.html?replytocom=465#respond' onclick='return addComment.moveForm( "div-comment-465", "465", "respond", "304" )' aria-label='Antworte auf saxx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-466" class="comment even thread-even depth-1">
+			<article id="div-comment-466" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://blog.overfloh.net/' rel='external nofollow' class='url'>lexx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-466">
+							<time datetime="2006-12-05T07:45:08+00:00">
+								5. Dezember 2006 um 7:45							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>/*&#8230; */<br />// prepare for supersecret bot-check!<br />if(&quot;bot&quot; != user.name) {<br />  // persist post</p>
+<p>/* &#8230; */</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexc833.html?replytocom=466#respond' onclick='return addComment.moveForm( "div-comment-466", "466", "respond", "304" )' aria-label='Antworte auf lexx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-467" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-467" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://www.pendlmayr.net/' rel='external nofollow' class='url'>Pendi</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-467">
+							<time datetime="2006-12-05T09:38:01+00:00">
+								5. Dezember 2006 um 9:38							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>}<br />//otherwise your comment can&#8217;t be compiled&#8230;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexa3aa.html?replytocom=467#respond' onclick='return addComment.moveForm( "div-comment-467", "467", "respond", "304" )' aria-label='Antworte auf Pendi'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-468" class="comment even thread-even depth-1">
+			<article id="div-comment-468" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>saxx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-468">
+							<time datetime="2007-02-20T10:23:36+00:00">
+								20. Februar 2007 um 10:23							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>grml, es wird wirklich zeit dass ich meinen super-secret bot check &#252;berarbeite. sucks.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index4cac.html?replytocom=468#respond' onclick='return addComment.moveForm( "div-comment-468", "468", "respond", "304" )' aria-label='Antworte auf saxx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-469" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-469" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://der.bioinformatiker.at/' rel='external nofollow' class='url'>Hannes</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-469">
+							<time datetime="2007-02-20T10:25:09+00:00">
+								20. Februar 2007 um 10:25							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>SPAM SPAM SPAM SPAM! (<a href="http://www.youtube.com/watch?v=wZ7YedEopp4" rel="nofollow">http://www.youtube.com/watch?v=wZ7YedEopp4</a>)</p>
+<p>Nett dass man auf fast alles mit einem Monty Python Sketch antworten kann 😉</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexd6d3.html?replytocom=469#respond' onclick='return addComment.moveForm( "div-comment-469", "469", "respond", "304" )' aria-label='Antworte auf Hannes'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-470" class="comment even thread-even depth-1">
+			<article id="div-comment-470" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>saxx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-470">
+							<time datetime="2007-02-20T10:46:12+00:00">
+								20. Februar 2007 um 10:46							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>So, ich hab den super-secret Bot Check &#252;berarbeitet und der ist jetzt so nifty, dass er nicht mehr den Text, sondern das Verhalten des Benutzers analysiert &#8211; nett, wof&#252;r es heutzutage schon fertige ASP.NET Komponenten gibt 😉</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index1545.html?replytocom=470#respond' onclick='return addComment.moveForm( "div-comment-470", "470", "respond", "304" )' aria-label='Antworte auf saxx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-471" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-471" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://der.bioinformatiker.at/' rel='external nofollow' class='url'>Hannes</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-471">
+							<time datetime="2007-02-20T11:19:56+00:00">
+								20. Februar 2007 um 11:19							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Damn, muss ich jetzt mein Verhalten anpassen, sonst werd&#8216; ich als Bot abgestempelt?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexfa01.html?replytocom=471#respond' onclick='return addComment.moveForm( "div-comment-471", "471", "respond", "304" )' aria-label='Antworte auf Hannes'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-472" class="comment even thread-even depth-1">
+			<article id="div-comment-472" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>saxx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-472">
+							<time datetime="2007-02-20T15:38:15+00:00">
+								20. Februar 2007 um 15:38							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hell yeah, das wird eine richtige herausforderung f&#252;r den durchschnittlichen weblog-leser!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index799c.html?replytocom=472#respond' onclick='return addComment.moveForm( "div-comment-472", "472", "respond", "304" )' aria-label='Antworte auf saxx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-473" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-473" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn">lexx</b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-473">
+							<time datetime="2007-02-22T08:05:44+00:00">
+								22. Februar 2007 um 8:05							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i am a robot! *beep beep*<br />do not hate me! *beep*</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index3ade.html?replytocom=473#respond' onclick='return addComment.moveForm( "div-comment-473", "473", "respond", "304" )' aria-label='Antworte auf lexx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-474" class="comment even thread-even depth-1">
+			<article id="div-comment-474" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://www.pendlmayr.net/' rel='external nofollow' class='url'>Pendi</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-474">
+							<time datetime="2007-02-22T12:24:54+00:00">
+								22. Februar 2007 um 12:24							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Damn, noch ein Blog in dem ich als Bot gesehen werde (gell, gotti&#8230;)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexcd0b.html?replytocom=474#respond' onclick='return addComment.moveForm( "div-comment-474", "474", "respond", "304" )' aria-label='Antworte auf Pendi'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-475" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-475" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='../../../../index.html' rel='external nofollow' class='url'>saxx</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-475">
+							<time datetime="2007-02-22T13:44:21+00:00">
+								22. Februar 2007 um 13:44							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>So, nachdem der vielversprechende neue Botcheck ein Stierdreck war, hab ich wieder auf den alten zur&#252;ck gewechselt und ihn ein bisschen verbessert.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexb927.html?replytocom=475#respond' onclick='return addComment.moveForm( "div-comment-475", "475", "respond", "304" )' aria-label='Antworte auf saxx'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-476" class="comment even thread-even depth-1">
+			<article id="div-comment-476" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://www.stormwarez.info/' rel='external nofollow' class='url'>fedellisaz</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-476">
+							<time datetime="2007-03-01T03:00:30+00:00">
+								1. März 2007 um 3:00							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Biggest site for you <br /><a href="http://www.stormwarez.info/" rel="nofollow">http://www.stormwarez.info</a> </p>
+<p>[URL]http://stormwarez.info[/URL]</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index7ba1.html?replytocom=476#respond' onclick='return addComment.moveForm( "div-comment-476", "476", "respond", "304" )' aria-label='Antworte auf fedellisaz'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-477" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-477" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/?s=42&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/?s=84&amp;d=mm&amp;r=g 2x' class='avatar avatar-42 photo avatar-default' height='42' width='42' />						<b class="fn"><a href='http://www.gottesheim.net/blog' rel='external nofollow' class='url'>gotti</a></b> <span class="says">sagt:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-477">
+							<time datetime="2007-03-01T14:29:02+00:00">
+								1. März 2007 um 14:29							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hail to saxxens botchecks!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexb2ad.html?replytocom=477#respond' onclick='return addComment.moveForm( "div-comment-477", "477", "respond", "304" )' aria-label='Antworte auf gotti'>Antworten</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+</div><!-- .comments-area -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Beitrags-Navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../../12/redesign/index.html" rel="prev"><span class="meta-nav" aria-hidden="true">Zurück</span> <span class="screen-reader-text">Vorheriger Beitrag:</span> <span class="post-title">Redesign</span></a></div><div class="nav-next"><a href="../langeweile/index.html" rel="next"><span class="meta-nav" aria-hidden="true">Weiter</span> <span class="screen-reader-text">Nächster Beitrag:</span> <span class="post-title">Langeweile</span></a></div></div>
+	</nav>
+	</main><!-- .site-main -->
+
+	
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archive</h2>		<ul>
+			<li><a href='../../../../2016/05/index.html'>Mai 2016</a></li>
+	<li><a href='../../../../2016/04/index.html'>April 2016</a></li>
+	<li><a href='../../../../2016/03/index.html'>März 2016</a></li>
+	<li><a href='../../../../2016/01/index.html'>Januar 2016</a></li>
+	<li><a href='../../../../2015/12/index.html'>Dezember 2015</a></li>
+	<li><a href='../../../../2015/09/index.html'>September 2015</a></li>
+	<li><a href='../../../../2015/08/index.html'>August 2015</a></li>
+	<li><a href='../../../../2015/07/index.html'>Juli 2015</a></li>
+	<li><a href='../../../../2015/06/index.html'>Juni 2015</a></li>
+	<li><a href='../../../../2015/05/index.html'>Mai 2015</a></li>
+	<li><a href='../../../../2015/04/index.html'>April 2015</a></li>
+	<li><a href='../../../../2015/02/index.html'>Februar 2015</a></li>
+	<li><a href='../../../../2015/01/index.html'>Januar 2015</a></li>
+	<li><a href='../../../../2014/12/index.html'>Dezember 2014</a></li>
+	<li><a href='../../../../2014/08/index.html'>August 2014</a></li>
+	<li><a href='../../../../2014/06/index.html'>Juni 2014</a></li>
+	<li><a href='../../../../2014/05/index.html'>Mai 2014</a></li>
+	<li><a href='../../../../2014/04/index.html'>April 2014</a></li>
+	<li><a href='../../../../2014/01/index.html'>Januar 2014</a></li>
+	<li><a href='../../../../2013/12/index.html'>Dezember 2013</a></li>
+	<li><a href='../../../../2013/11/index.html'>November 2013</a></li>
+	<li><a href='../../../../2013/10/index.html'>Oktober 2013</a></li>
+	<li><a href='../../../../2013/09/index.html'>September 2013</a></li>
+	<li><a href='../../../../2013/08/index.html'>August 2013</a></li>
+	<li><a href='../../../../2013/07/index.html'>Juli 2013</a></li>
+	<li><a href='../../../../2013/06/index.html'>Juni 2013</a></li>
+	<li><a href='../../../../2013/05/index.html'>Mai 2013</a></li>
+	<li><a href='../../../../2012/10/index.html'>Oktober 2012</a></li>
+	<li><a href='../../../../2012/09/index.html'>September 2012</a></li>
+	<li><a href='../../../../2012/08/index.html'>August 2012</a></li>
+	<li><a href='../../../../2012/05/index.html'>Mai 2012</a></li>
+	<li><a href='../../../../2012/04/index.html'>April 2012</a></li>
+	<li><a href='../../../../2012/03/index.html'>März 2012</a></li>
+	<li><a href='../../../../2012/02/index.html'>Februar 2012</a></li>
+	<li><a href='../../../../2011/12/index.html'>Dezember 2011</a></li>
+	<li><a href='../../../../2011/11/index.html'>November 2011</a></li>
+	<li><a href='../../../../2011/10/index.html'>Oktober 2011</a></li>
+	<li><a href='../../../../2011/09/index.html'>September 2011</a></li>
+	<li><a href='../../../../2011/08/index.html'>August 2011</a></li>
+	<li><a href='../../../../2011/07/index.html'>Juli 2011</a></li>
+	<li><a href='../../../../2011/06/index.html'>Juni 2011</a></li>
+	<li><a href='../../../../2011/05/index.html'>Mai 2011</a></li>
+	<li><a href='../../../../2011/04/index.html'>April 2011</a></li>
+	<li><a href='../../../../2011/03/index.html'>März 2011</a></li>
+	<li><a href='../../../../2011/02/index.html'>Februar 2011</a></li>
+	<li><a href='../../../../2011/01/index.html'>Januar 2011</a></li>
+	<li><a href='../../../../2010/12/index.html'>Dezember 2010</a></li>
+	<li><a href='../../../../2010/11/index.html'>November 2010</a></li>
+	<li><a href='../../../../2010/10/index.html'>Oktober 2010</a></li>
+	<li><a href='../../../../2010/09/index.html'>September 2010</a></li>
+	<li><a href='../../../../2010/08/index.html'>August 2010</a></li>
+	<li><a href='../../../../2010/07/index.html'>Juli 2010</a></li>
+	<li><a href='../../../../2010/06/index.html'>Juni 2010</a></li>
+	<li><a href='../../../../2010/05/index.html'>Mai 2010</a></li>
+	<li><a href='../../../../2010/04/index.html'>April 2010</a></li>
+	<li><a href='../../../../2010/03/index.html'>März 2010</a></li>
+	<li><a href='../../../../2010/02/index.html'>Februar 2010</a></li>
+	<li><a href='../../../../2009/12/index.html'>Dezember 2009</a></li>
+	<li><a href='../../../../2009/11/index.html'>November 2009</a></li>
+	<li><a href='../../../../2009/10/index.html'>Oktober 2009</a></li>
+	<li><a href='../../../../2009/09/index.html'>September 2009</a></li>
+	<li><a href='../../../../2009/07/index.html'>Juli 2009</a></li>
+	<li><a href='../../../../2009/06/index.html'>Juni 2009</a></li>
+	<li><a href='../../../../2009/05/index.html'>Mai 2009</a></li>
+	<li><a href='../../../../2009/04/index.html'>April 2009</a></li>
+	<li><a href='../../../../2009/03/index.html'>März 2009</a></li>
+	<li><a href='../../../../2009/02/index.html'>Februar 2009</a></li>
+	<li><a href='../../../../2009/01/index.html'>Januar 2009</a></li>
+	<li><a href='../../../../2008/12/index.html'>Dezember 2008</a></li>
+	<li><a href='../../../../2008/11/index.html'>November 2008</a></li>
+	<li><a href='../../../../2008/10/index.html'>Oktober 2008</a></li>
+	<li><a href='../../../../2008/09/index.html'>September 2008</a></li>
+	<li><a href='../../../../2008/08/index.html'>August 2008</a></li>
+	<li><a href='../../../../2008/07/index.html'>Juli 2008</a></li>
+	<li><a href='../../../../2008/06/index.html'>Juni 2008</a></li>
+	<li><a href='../../../../2008/05/index.html'>Mai 2008</a></li>
+	<li><a href='../../../../2008/04/index.html'>April 2008</a></li>
+	<li><a href='../../../../2008/03/index.html'>März 2008</a></li>
+	<li><a href='../../../../2008/02/index.html'>Februar 2008</a></li>
+	<li><a href='../../../../2008/01/index.html'>Januar 2008</a></li>
+	<li><a href='../../../../2007/12/index.html'>Dezember 2007</a></li>
+	<li><a href='../../../../2007/11/index.html'>November 2007</a></li>
+	<li><a href='../../../../2007/10/index.html'>Oktober 2007</a></li>
+	<li><a href='../../../../2007/09/index.html'>September 2007</a></li>
+	<li><a href='../../../../2007/08/index.html'>August 2007</a></li>
+	<li><a href='../../../../2007/07/index.html'>Juli 2007</a></li>
+	<li><a href='../../../../2007/06/index.html'>Juni 2007</a></li>
+	<li><a href='../../../../2007/05/index.html'>Mai 2007</a></li>
+	<li><a href='../../../../2007/04/index.html'>April 2007</a></li>
+	<li><a href='../../../../2007/03/index.html'>März 2007</a></li>
+	<li><a href='../../../../2007/02/index.html'>Februar 2007</a></li>
+	<li><a href='../../../../2007/01/index.html'>Januar 2007</a></li>
+	<li><a href='../../../12/index.html'>Dezember 2006</a></li>
+	<li><a href='../../../11/index.html'>November 2006</a></li>
+	<li><a href='../../../10/index.html'>Oktober 2006</a></li>
+	<li><a href='../../../09/index.html'>September 2006</a></li>
+	<li><a href='../../../08/index.html'>August 2006</a></li>
+	<li><a href='../../../07/index.html'>Juli 2006</a></li>
+	<li><a href='../../../06/index.html'>Juni 2006</a></li>
+	<li><a href='../../../05/index.html'>Mai 2006</a></li>
+	<li><a href='../../../04/index.html'>April 2006</a></li>
+	<li><a href='../../../03/index.html'>März 2006</a></li>
+	<li><a href='../../index.html'>Februar 2006</a></li>
+	<li><a href='../../../01/index.html'>Januar 2006</a></li>
+	<li><a href='../../../../2005/12/index.html'>Dezember 2005</a></li>
+	<li><a href='../../../../2005/11/index.html'>November 2005</a></li>
+	<li><a href='../../../../2005/10/index.html'>Oktober 2005</a></li>
+	<li><a href='../../../../2005/09/index.html'>September 2005</a></li>
+	<li><a href='../../../../2005/08/index.html'>August 2005</a></li>
+	<li><a href='../../../../2005/07/index.html'>Juli 2005</a></li>
+	<li><a href='../../../../2005/06/index.html'>Juni 2005</a></li>
+	<li><a href='../../../../2005/05/index.html'>Mai 2005</a></li>
+	<li><a href='../../../../2005/04/index.html'>April 2005</a></li>
+	<li><a href='../../../../2005/03/index.html'>März 2005</a></li>
+	<li><a href='../../../../2005/02/index.html'>Februar 2005</a></li>
+	<li><a href='../../../../2005/01/index.html'>Januar 2005</a></li>
+	<li><a href='../../../../2004/12/index.html'>Dezember 2004</a></li>
+	<li><a href='../../../../2004/11/index.html'>November 2004</a></li>
+	<li><a href='../../../../2004/10/index.html'>Oktober 2004</a></li>
+	<li><a href='../../../../2004/06/index.html'>Juni 2004</a></li>
+	<li><a href='../../../../2004/05/index.html'>Mai 2004</a></li>
+	<li><a href='../../../../2004/04/index.html'>April 2004</a></li>
+	<li><a href='../../../../2004/03/index.html'>März 2004</a></li>
+	<li><a href='../../../../2004/02/index.html'>Februar 2004</a></li>
+	<li><a href='../../../../2004/01/index.html'>Januar 2004</a></li>
+	<li><a href='../../../../2003/12/index.html'>Dezember 2003</a></li>
+	<li><a href='../../../../2003/11/index.html'>November 2003</a></li>
+		</ul>
+		</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			
+			<div class="site-info">
+								<span class="site-title"><a href="../../../../index.html" rel="home">RandomInsights.net</a></span>
+				<a href="https://de.wordpress.org/">Stolz präsentiert von WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type='text/javascript' src='../../../../../s0.wp.com/wp-content/js/devicepx-jetpack9a2f.js?ver=201725'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/twentysixteen/js/skip-link-focus-fixb7d3.js?ver=20160412'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/comment-reply.minef15.js?ver=4.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"Untermen\u00fc anzeigen","collapse":"Untermen\u00fc verbergen"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/twentysixteen/js/functionsb7d3.js?ver=20160412'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/wp-embed.minef15.js?ver=4.8'></script>
+<script type='text/javascript' src='../../../../../stats.wp.com/e-201725.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.6',blog:'89991183',post:'304',tz:'2',srv:'www.randominsights.net'} ]);
+	_stq.push([ 'clickTrackerInit', '89991183', '304' ]);
+</script>
+</body>
+
+<!-- Mirrored from www.randominsights.net/2006/02/13/how-to-write-a-recent-comments-macro-for-dasblog/?replytocom=471 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jun 2017 09:35:17 GMT -->
+</html>

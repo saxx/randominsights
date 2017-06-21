@@ -1,0 +1,54 @@
+Timestamp	Wo triffst du dich?	Um wieviel Uhr triffst du dich?
+10/23/2010 14:37:33	Stephansplatz	Mittag
+10/23/2010 14:43:54	Am West- bzw. Hauptbahnhof	ab 18 Uhr
+10/23/2010 14:52:12	Stephansplatz	13 Uhr
+10/23/2010 15:01:19	Dort wo wir uns am Vortag getroffen haben	18:00:00
+10/23/2010 15:02:52	Stephansplatz	19 Uhr
+10/23/2010 15:26:58	Stefansplatz	18 Uhr
+10/23/2010 15:41:48	Beim Riesenrad	20:00:00
+10/23/2010 15:51:06	Beim Riesenrad	12:00 mittags
+10/23/2010 15:57:49	Stephansdom	12 Uhr
+10/23/2010 16:19:05	Stephansplatz	15 Uhr
+10/23/2010 16:23:39	bekanntes Kaffee	16 Uhr
+10/23/2010 16:56:12	Stephansdom	15
+10/23/2010 17:03:38	stephansplatz	12:00:00
+10/23/2010 17:07:11	genau da wo ich ihn das letzte mal gesehen habe	genau dann wann ich ihn das letzte mal gesehen habe
+10/23/2010 17:52:16	mariahilfer-straße	18:00:00
+10/23/2010 18:26:38	Bahnhof	15 uhr
+10/23/2010 18:55:51	Dort wo wir uns das letzte mal gesehen haben	16:00:00
+10/23/2010 19:07:06	stephansplatz	12 Uhr
+10/23/2010 19:25:04	stefansplatz	18
+10/23/2010 20:47:45	Museumsquartier	20:00:00
+10/23/2010 21:41:35	Stephansdom	16
+10/23/2010 22:04:16	Stephansplatz	19:00:00
+10/23/2010 22:59:05	Stephansdom	20 uhr
+10/23/2010 23:50:41	Stephansplatz	14
+10/24/2010 8:02:58	Stephansplatz	20:00:00
+10/24/2010 13:12:16	Bahnhof	12:00:00
+10/24/2010 16:05:39	Stephansdom	12:00:00
+10/24/2010 18:05:20	Hauptbahnhof	18:00:00
+10/24/2010 19:42:50	Stephansdom	19:00:00
+10/25/2010 10:35:16	Bahnhof	18:00:00
+10/25/2010 13:35:01	Vor dem Stephansdom	19 Uhr
+10/25/2010 13:51:18	Uni/Audimax	18
+10/25/2010 14:20:42	Stephansplatz	18:00:00
+10/25/2010 14:23:32	Donauturm	14:00 Uhr
+10/25/2010 15:13:33	Ich treff mich überall, die Frage ist, wo treff ich SIE?	13:37:00
+10/25/2010 19:12:30	Stephansplatz	12 Uhr mittags
+10/25/2010 19:44:14	hauptbahnhof	1400
+10/25/2010 21:47:05	Südbahnhof	15:00:00
+10/26/2010 15:18:31	Dort wo wir uns kennengelernt haben	den ganzen tag
+10/26/2010 17:25:55	Beim Stephansdom	12:00:00
+10/26/2010 18:22:55	Hauptbahnhof	18:00:00
+10/26/2010 19:55:22	Stephansplatz	19:00:00
+10/26/2010 20:58:00	Bahnhof	20 Uhr
+10/26/2010 21:31:47	donaukanal strandbar	17:00:00
+10/27/2010 15:48:33	vorm stephansdom	gefühlsmäßig 14:00, da es sich aber um ein Date handelt: 20:00 Uhr
+10/27/2010 17:50:32	Vor dem Stephansdom	14 Uhr
+10/27/2010 21:48:56	vorm Stephansdom	20:00:00
+10/28/2010 15:05:36	Wien	morgen
+10/30/2010 9:11:31	Stephansdom	19:00:00
+11/1/2010 17:10:08	in einem Cafe	19 uhr
+11/2/2010 14:15:56	Stephansdom	13:37:00
+11/2/2010 14:19:00	McDonalds	12:00:00
+11/3/2010 15:47:20	Hotel Sacher	12
